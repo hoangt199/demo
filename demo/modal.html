@@ -1,20 +1,44 @@
-<div id="openModal" class="modalDialog">
-    <div>
-        <a href="#close" title="Close" class="close">X</a>
-        <table style="padding-bottom: 10px;">
-            <tr>
-                <th>Xác nhận nạp điểm</th>
-            </tr>
-            <tr>
-                <td>
-                    <h3>Tên cửa hàng : </h3>
-                    <p>Xác nhận nạp ... điểm cho cửa hàng?</p>
-                    <div class="confirm">
-                        <a class="common-submit" href="#close">Xác nhận</a>
-                        <a class="common-submit" href="#close">Hủy bỏ</a>
-                    </div>
-                </td>
-            </tr>
-        </table>
-    </div>
-</div>
+
+<aside>
+    <section>
+        <div id="openModal" class="modalDialog">
+            <div>
+                <!-- <div class="notice info"><p>This is a an info notice, it provides feedback of a neutral nature to the user.</p></div> -->
+
+            <div id="noti-success" class="notice success "><p>This is a success notice, it provides feedback of a positive nature to the user.</p></div>
+
+            <!-- <div class="notice warning"><p>This is a warning notice, it provides feedback of a potentially negative nature to the user.</p></div> -->
+
+            <div id="noti-error" class="notice error"><p>This is an error notice, it provides feedback of a negative nature to the user.</p></div>
+                <a href="#close" title="Close" class="close">X</a>
+                <table style="padding-bottom: 10px;">
+                    <tr>
+                        <th>Xác nhận nạp điểm</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>Tên cửa hàng : </h3>
+                            <p>Xác nhận nạp ... điểm cho cửa hàng?</p>
+                            <div class="confirm">
+                                <a href="#close" class="common-submit" onclick="fnApply();">Xác nhận</a>
+                                <a href="#close" class="common-submit" onclick="fnExit();">Hủy bỏ</a>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+</aside>
+<script>
+    function fnApply(){
+        $("#noti-success").fadeTo(2000, 300).slideUp(200, function(){
+        $("#noti-success").slideUp(300);
+});
+    }
+    function fnExit(){
+        $("#noti-error").fadeTo(2000, 300).slideUp(200, function(){
+        $("#noti-error").slideUp(300);
+});
+    }
+</script>
