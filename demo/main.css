@@ -1,0 +1,268 @@
+.body{
+    font-size: 16px;
+}
+a{
+    text-decoration: none;
+}
+#wrapper{
+    max-width: 1400px;
+    margin: 0px auto;;
+}
+.tabs{
+    border-bottom: 1px solid #ddd;
+}
+/* style nav tabs */
+.nav-tabs{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 3px solid #ddd;
+    /* #e67e22 */
+}
+.nav-tabs {
+    display: flex;
+    /* justify-content: space-between; */
+}
+.nav-tabs li{
+    text-align: center;
+    margin-right: 40px;
+}
+.nav-tabs li a{
+    display: block;
+    padding: 6px 10px;
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+.nav-tabs li a::after{
+    content: "";
+    height: 3px;
+    width: 100%;
+    left: 0;
+    bottom: -3px;
+    position: absolute;
+    background: transparent; /* mau trong suot*/
+}
+.nav-tabs li.active a::after, .nav-tabs li:hover a::after{
+    background: #e67e22;
+}
+
+/* Pagination */
+
+.pagination {
+    /* display: inline-block; */
+    margin: 7px;
+    float: right;
+  }
+  
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 4px 10px;
+    text-decoration: none;
+    transition: background-color .3s;
+  }
+  
+  .pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .pagination a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+  }
+
+/* style tabs content */
+/* .tab-content{
+    padding: 20px;
+} */
+table {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    padding: 0;
+}
+table tr th,table tr td{
+    height: 30px;
+}
+table tr th{
+    background: #366092;
+    color: white;
+}
+table tr td{
+    background: rgb(235, 233, 233);
+}
+/* Search box */
+/* .col-sm-3{
+    width: 30%;
+} */
+.content-item{
+    padding: 0;
+    margin:0;
+}
+#search-form{
+  display: flex;
+}
+.col-sm-3{
+    margin-right: 10px;
+}
+#abt-search-btn {
+    background: none repeat scroll 0 0 #366092;
+    border: 0 none;
+    border-radius: 0 0 0 0;
+    color: #FFFFFF;
+    font-weight: 700;
+    padding: 10px 20px;
+    cursor: pointer;
+    }
+    #abt-export-btn {
+        background: none repeat scroll 0 0 #366092;
+        border: 0 none;
+        border-radius: 0 0 0 0;
+        color: #FFFFFF;
+        font-weight: 700;
+        padding: 10px 20px;
+        }
+#abt-search-box {
+   border: none;
+    background: none repeat scroll 0 0 #f2f2f2;
+    padding: 10px;
+    width: 30%;
+    border-radius: 3px;
+
+}
+input:focus { outline-color: #d2d2d2 ;}
+
+
+/* Dropdown list */
+div.dropdown {
+    position: relative;
+    width: 30%;
+  }
+  
+  div.dropdown > div.caption {
+    background-color: #f2f2f2;
+    padding: 11px 24px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  div.dropdown > div.list {
+    position: absolute;
+    background-color: #f2f2f2;
+    width: 100%;
+    border-radius: 0 0 3px 3px;
+    display: none;
+  }
+  
+  div.dropdown > div.list > div.item {
+    padding: 11px 24px;
+    cursor: pointer;
+  }
+  
+  div.dropdown > div.list > div.item.selected {
+    font-weight: bold;
+  }
+  
+  div.dropdown > div.caption:hover,
+  div.dropdown > div.list > div.item:hover {
+    background-color: #366092;
+    color: #fff;
+  }
+  
+  div.dropdown.open > div.caption {
+    border-radius: 3px 3px 0 0;
+    border-bottom: solid 1px #999;
+  }
+  
+  div.dropdown.open > div.list {
+    display: block;
+  }
+
+  /* Date picker  */
+  .date-filter{
+      display: flex;
+      align-items: flex-end;
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+  input[type="date"] {
+    padding: 10px;
+    border-radius: 3px;
+    border: solid 1px #CCC;
+  }
+  .to-datePicker{
+      margin-left: 10px;
+  }
+
+  /* Modal css */
+  .modalDialog {
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 10px;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+}
+
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+
+.modalDialog > div {
+    width: 400px;
+    position: relative;
+    margin: 10% auto;
+    padding: 5px 20px 13px 20px;
+    border-radius: 10px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, rgb(255, 232, 232));
+    background: -webkit-linear-gradient(#fff,  rgb(255, 232, 232));
+    background: -o-linear-gradient(#fff,  rgb(255, 232, 232));
+}
+
+.close {
+    background: #606061;
+    color: #FFFFFF;
+    line-height: 25px;
+    position: absolute;
+    right: -12px;
+    text-align: center;
+    top: -10px;
+    width: 24px;
+    text-decoration: none;
+    font-weight: bold;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 1px 1px 3px #000;
+    -webkit-box-shadow: 1px 1px 3px #000;
+    box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover { background: #366092; }
+
+.common-submit{
+    background: none repeat scroll 0 0 #366092;
+    border: 0 none;
+    color: #FFFFFF;
+    font-weight:500;
+    padding: 6px 12px;
+    border-radius: 5px;
+    margin: 5px 5px;
+}
+.confirm{
+    height: inherit;
+}

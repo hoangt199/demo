@@ -1,0 +1,62 @@
+<aside>
+  <section>
+  <h2>Menu 1</h2>
+  <div class="content-item">
+      <form id="search-form" action="/filter-store" method="GET">
+          <input class="col-sm-3" id="abt-search-box" name="q" size="40" type="text" placeholder=" Tìm kiếm cửa hàng "/>
+          <div class="dropdown col-sm-3">
+              <div class="caption">Select</div>
+              <div class="list">
+                <div class="item">----- Trạng thái -----</div>
+                <div class="item">Đang hoạt động</div>
+                <div class="item">Dừng hoạt động</div>
+              </div>
+            </div>
+          <input class="col-sm-3" id="abt-search-btn" value="Search" type="submit"/>
+  </div>
+  <!-- pagination -->
+  <div id="pagination"></div>
+  <div class="content-item">
+      <table >
+          <tr>
+              <th>STT</th>
+              <th>ID Cửa hàng</th>
+              <th>Tên cửa hàng</th>
+              <th>Số dư Business Money hiện tại</th>
+              <th>Trạng thái</th>
+          </tr>
+          <tr>
+              <td>1</td>
+              <td>Lorem</td>
+              <td>Lorem</td>
+              <td>Lorem</td>
+              <td>Lorem</td>
+          </tr>
+      </table>
+  </div>
+  </section>
+</aside>
+  
+<script>
+   $('#pagination').load("pagination.html");
+         $('.dropdown > .caption').on('click', function() {
+        $(this).parent().toggleClass('open');
+      });
+      
+      $('.dropdown > .list > .item').on('click', function() {
+        $('.dropdown > .list > .item').removeClass('selected');
+        $(this).addClass('selected').parent().parent().removeClass('open').children('.caption').text( $(this).text() );
+      });
+      
+      $(document).on('keyup', function(evt) {
+        if ( (evt.keyCode || evt.which) === 27 ) {
+          $('.dropdown').removeClass('open');
+        }
+      });
+      
+      $(document).on('click', function(evt) {
+        if ( $(evt.target).closest(".dropdown > .caption").length === 0 ) {
+          $('.dropdown').removeClass('open');
+        }
+      });
+</script>

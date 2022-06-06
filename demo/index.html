@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script language="javascript1.2" src="maintabs.js" ></script>
+    <title>Tabs menu</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Gamani beadal</h1>
+        <h3>Tổng số cửa hàng : 12</h3>
+        <div class="tabs">
+            <ul class="nav-tabs">
+                <li class="active"><a href="#menu-tabs_1">Danh sách cửa hàng</a></li>
+                <li><a href="#menu-tabs_2">Lịch sử yêu cầu nạp</a></li>
+                <li><a href="#menu-tabs_3">Lịch sử giao dịch BM</a></li>
+                <li><a href="#menu-tabs_4">Lịch sử hoàn BM</a></li>
+                <li><a href="#menu-tabs_5">Quản lý thanh toán</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-content-item" id="menu-tabs_1">
+                    <div id="tabcontent"></div>
+                </div>
+                <div class="tab-content-item" id="menu-tabs_2">
+                    <div id="tabcontent-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
