@@ -1,4 +1,4 @@
-.body{
+body{
     font-size: 16px;
     position: relative;
 }
@@ -27,7 +27,6 @@ a{
 }
 .nav-tabs li{
     text-align: center;
-    margin-right: 40px;
 }
 .nav-tabs li a{
     display: block;
