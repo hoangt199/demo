@@ -1,43 +1,63 @@
 <aside>
     <section>
     <h2>Menu 2</h2>
-    <div class="content-item">
-        <form id="search-form" action="/filter-store-by-date-range" method="GET">
-            <input id="abt-search-box" name="q" size="40" type="text" placeholder=" Tìm kiếm cửa hàng "/>
-            <div class="date-filter">
-                <div class="from-datePicker">
-                    <label >From date :</label>
-                    <input type="date"
-                    id="datePicker" name="datePicker"
-                    value="2021-03-22"
-                    min="2001-01-01" max="2099-12-31">
-                </div>
-                <div class="to-datePicker">
-                    <label >To date :</label>
-                    <input type="date"
-                    id="datePicker" name="datePicker"
-                    value="2021-03-22"
-                    min="2001-01-01" max="2099-12-31">
-                </div>
-            </div>
-            <input id="abt-export-btn" value="Export" type="submit"/>
-        </form>
-    </div>
        <!-- pagination -->
-    <div id="pagination-content-4"></div>
-    <div class="content-item">
-        <form>
-            <input name="gender" type="radio" value="Nam" />Nam
-            <input name="gender" type="radio" value="Nữ" />Nữ
-            <input name="gender" type="radio" value="Khác" />Khác
-            </form>
+    <div class="content-item" style="margin-top: 50px;">
+        <div class="d-flex justify-content-between">
+            <h5 class="fw-semibold">Các phương thức thanh toán</h5>
+            <input class="btn btn-primary" type="button" value="Lưu">
+        </div>
+        <div class="form_radio row container" style="margin-top: 10px;">
+            <div class="form-check col">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                    CK qua số thẻ
+                </label>
+            </div>
+            <div class="form-check col">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                    CK qua số tài khoản ngân hàng
+                </label>
+            </div>
+            <div class="form-check col">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                    CK qua ví điện tử
+                </label>
+            </div>
+        </div>
+        <div id="modalconfirm"></div>
+    </div>
+
+    <div class="content-item" style="margin-top: 50px;">
+        <div class="d-flex justify-content-between">
+            <h5 class="fw-semibold">Danh sách thông tin thanh toán</h5>
+        </div>
+        <div class="form-check form-switch mt-1">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+            <label class="form-check-label" for="flexSwitchCheckChecked">Hàn quốc(won)</label>
+        </div>          
+        <form class="row g-3 justify-content-between mt-3">
+            <div class="col-auto">
+                <input type="text" class="form-control" id="inputPassword2" placeholder="Tên ngân hàng">
+              </div>
+            <div class="col-auto">
+              <input type="text" class="form-control" id="inputPassword2" placeholder="Tài khoản thụ hưởng">
+            </div>
+            <div class="col-auto">
+                <input type="text" class="form-control" id="inputPassword2" placeholder="Người thụ hưởng">
+              </div>
+            <div class="col-auto">
+              <button type="submit" class="btn btn-primary mb-3">Xóa</button>
+            </div>
+          </form>
         <div id="modalconfirm"></div>
     </div>
     </section>
 </aside>
 
 <script>
-    $('#pagination-content-4').load("pagination.html");
     $('#modalconfirm').load("modal.html");
 
     // show modal
