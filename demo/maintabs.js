@@ -1,7 +1,9 @@
 
    $(function(){
-      $('#tabcontent').load("../MenuContentItem/tabcontent-1.html");
-      $('#tabcontent-2').load("../MenuContentItem/tabcontent-2.html"); 
+      $('#tabcontent').load("MenuContentItem/tabcontent-1.html");
+      $('#tabcontent-2').load("MenuContentItem/tabcontent-2.html"); 
+      $('#tabcontent-4').load("MenuContentItem/tabcontent-4.html"); 
+      $('#tabcontent-5').load("MenuContentItem/tabcontent-5.html"); 
    });
 $(document).ready(function(){
     $(".tab-content-item").hide();

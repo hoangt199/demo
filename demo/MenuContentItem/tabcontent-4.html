@@ -1,0 +1,70 @@
+<aside>
+    <section>
+    <h2>Menu 2</h2>
+    <div class="content-item">
+        <form id="search-form" action="/filter-store-by-date-range" method="GET">
+            <input id="abt-search-box" name="q" size="40" type="text" placeholder=" Tìm kiếm cửa hàng "/>
+            <div class="date-filter">
+                <div class="from-datePicker">
+                    <label >From date :</label>
+                    <input type="date"
+                    id="datePicker" name="datePicker"
+                    value="2021-03-22"
+                    min="2001-01-01" max="2099-12-31">
+                </div>
+                <div class="to-datePicker">
+                    <label >To date :</label>
+                    <input type="date"
+                    id="datePicker" name="datePicker"
+                    value="2021-03-22"
+                    min="2001-01-01" max="2099-12-31">
+                </div>
+            </div>
+            <input id="abt-export-btn" value="Export" type="submit"/>
+        </form>
+    </div>
+       <!-- pagination -->
+    <div id="pagination-content-4"></div>
+    <div class="content-item">
+        <table >
+            <tr>
+                <th>Mã giao dịch</th>
+                <th>Ngày yêu cầu</th>
+                <th>ID Cửa hàng</th>
+                <th>Tên cửa hàng</th>
+                <th>Số tiền</th>
+                <th>Loại tiền tệ</th>
+                <th>Phương thức thanh toán</th>
+                <th>Ngân hàng thụ hưởng</th>
+                <th>Số tài khoản</th>
+                <th>Tên người thụ hưởng</th>
+                <th>Trạng thái</th>
+                <th>Thao tác</th>
+            </tr>
+            <tr>
+                <td>Lorem</td>
+                <td>Lorem</td>
+                <td>Lorem</td>
+                <td>Lorem</td>
+                <td>Lorem</td>
+                <td>Lorem</td>
+                <td>Lorem</td>
+                <td>Lorem</td>
+                <td>Lorem</td>
+                <td>Lorem</td>
+                <td>Lorem</td>
+                <td><a class="common-submit" href="#openModal">Confirm</a></td>
+            </tr>
+        </table>
+        <div id="modalconfirm"></div>
+    </div>
+    </section>
+</aside>
+
+<script>
+    $('#pagination-content-4').load("pagination.html");
+    $('#modalconfirm').load("modal.html");
+
+    // show modal
+    
+</script>

@@ -59,20 +59,23 @@ a{
   .pagination a {
     color: black;
     float: left;
-    padding: 4px 10px;
+    padding: 2px 7px;
+    margin: 0 2px;
     text-decoration: none;
     transition: background-color .3s;
   }
   
   .pagination a.active {
-    background-color: #4CAF50;
+    background-color: #1890FF;
     color: white;
-    border-radius: 5px;
   }
   
-  .pagination a:hover:not(.active) {
+  .pagination .num{
     background-color: #ddd;
-    border-radius: 5px;
+  }
+
+  .pagination a:hover:not(.active) {
+    background-color: rgb(153, 152, 152);
   }
 
 /* style tabs content */
