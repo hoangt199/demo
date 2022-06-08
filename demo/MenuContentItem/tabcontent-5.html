@@ -1,8 +1,7 @@
 <aside>
-    <section>
-    <h2>Menu 2</h2>
+    <section class="content_page">
        <!-- pagination -->
-    <div class="content-item" style="margin-top: 50px;">
+    <div class="content-item">
         <div class="d-flex justify-content-between">
             <h5 class="fw-semibold"><i class="fa-solid fa-bars-staggered"></i> Các phương thức thanh toán</h5>
             <input class="btn btn-primary" type="button" value="Lưu">
@@ -10,19 +9,19 @@
         <div class="form_radio row container" style="margin-top: 10px;">
             <div class="form-check col">
                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                <label class="form-check-label" for="flexRadioDefault2">
+                <label class="form-check-label">
                     CK qua số thẻ
                 </label>
             </div>
             <div class="form-check col">
                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                <label class="form-check-label" for="flexRadioDefault2">
+                <label class="form-check-label">
                     CK qua số tài khoản ngân hàng
                 </label>
             </div>
             <div class="form-check col">
                 <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                <label class="form-check-label" for="flexRadioDefault2">
+                <label class="form-check-label">
                     CK qua ví điện tử
                 </label>
             </div>
@@ -35,21 +34,21 @@
             <h5 class="fw-semibold"><i class="fa-solid fa-user-pen"></i> Danh sách thông tin thanh toán</h5>
         </div>
         <div class="form-check form-switch mt-1">
-            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-            <label class="form-check-label" for="flexSwitchCheckChecked">Hàn quốc(won)</label>
+            <input class="form-check-input" type="checkbox" role="switch" style="background-color: green;" id="flexSwitchCheckChecked" onload="doCalculate()" onclick="choseKo()"checked>
+            <label class="form-check-label" for="flexSwitchCheck">Hàn quốc(won)</label>
         </div>          
         <form class="row g-3 justify-content-between mt-3">
             <div class="col-auto">
-                <input type="text" class="form-control" id="inputPassword2" placeholder="Tên ngân hàng">
+                <input type="text" class="form-control input_bill" id="inputPassword2" placeholder="Tên ngân hàng">
               </div>
             <div class="col-auto">
-              <input type="text" class="form-control" id="inputPassword2" placeholder="Tài khoản thụ hưởng">
+              <input type="text" class="form-control input_bill" id="inputPassword2" placeholder="Tài khoản thụ hưởng">
             </div>
             <div class="col-auto">
-                <input type="text" class="form-control" id="inputPassword2" placeholder="Người thụ hưởng">
+                <input type="text" class="form-control input_bill" id="inputPassword2" placeholder="Người thụ hưởng">
               </div>
             <div class="col-auto">
-              <button type="submit" class="btn btn-primary mb-3">Xóa</button>
+              <button class="btn btn-primary mb-3 btn_remove" onclick="ClickButtonRemove()">Xóa</button>
             </div>
           </form>
         <div id="modalconfirm"></div>
@@ -59,7 +58,6 @@
 
 <script>
     $('#modalconfirm').load("modal.html");
-
     // show modal
     
 </script>

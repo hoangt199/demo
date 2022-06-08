@@ -18,3 +18,19 @@ $(document).ready(function(){
         return false;
     })
 })
+function choseKo()  {
+    const btn = document.getElementById("flexSwitchCheckChecked");
+    if (btn.checked == true)
+    {
+        btn.style.backgroundColor = "green"
+    }else{
+        btn.style.backgroundColor = "red"
+    }
+}
+function ClickButtonRemove(){
+    const btn = document.getElementById("btn_remove");
+    var inputs = document.getElementsByClassName("input_bill");
+    for (var i = 0; i < inputs.length; i++) {
+        inputs[i].value = ""
+    }
+}

@@ -12,7 +12,7 @@ a{
     margin: 0px auto;;
 }
 /* .tabs{
-    border-bottom: 1px solid #ddd;
+  
 } */
 /* style nav tabs */
 .nav-tabs{
@@ -83,7 +83,7 @@ a{
 
 /* style tabs content */
 /* .tab-content{
-    padding: 20px;
+  
 } */
 .form_radio{
   display: flex;
@@ -284,4 +284,7 @@ div.dropdown {
 }
 .confirm{
     height: inherit;
+}
+.content_page{
+  margin-top: 50px;
 }
